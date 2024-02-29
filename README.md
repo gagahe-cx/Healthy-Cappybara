@@ -1,6 +1,6 @@
 # Healthcare Accessibility Scores in Cook County
 
-Many individuals in the United States struggle to access necessary health care services. [Healthy People 2030](https://health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality)\ defines Healthcare Accessibility as the capacity to obtain timely, high-quality, and affordable health care services. Aligning with the objective to enhance healthcare accessibility and promote healthier lives, our project aims to devise a systematic approach to improve access to healthcare within Cook County communities.
+Many individuals in the United States struggle to access necessary health care services. [Healthy People 2030](https://health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality) defines Healthcare Accessibility as the capacity to obtain timely, high-quality, and affordable health care services. Aligning with the objective to enhance healthcare accessibility and promote healthier lives, our project aims to devise a systematic approach to improve access to healthcare within Cook County communities.
 
 Healthcare Accessibility can be broken down into three key components:
 * Healthcare Service Capacity: This refers to the availability of healthcare services, indicated by the number, costs, and quality ratings of hospitals, nursing homes, and home care agencies.
