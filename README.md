@@ -25,8 +25,6 @@ Hourui Guo, Yijia He, Yue Jian, Qi Zhao
 
 ## Package used
 pandas\
-geopandas\
-geojson\
 folium\
 plotly\
 matplotlib\
