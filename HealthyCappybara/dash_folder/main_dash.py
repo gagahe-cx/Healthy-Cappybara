@@ -193,7 +193,7 @@ doctor_heat_map.update_layout(
     margin={"r": 0, "t": 0, "l": 0, "b": 0},
 )
 
-# relationship map plots
+# policy implication map plots
 def assign_group(row, health_threshold, demand_threshold):
     health_status = (
         "High-Health"
@@ -242,7 +242,7 @@ map_cluster = px.choropleth_mapbox(
     zoom=colors["zoom"],
     center=colors["center"],
     opacity=0.5,
-    title="Distribution of Groups by Location",
+    title="Geographic Distribution of Groups by Location",
 )
 map_cluster.update_layout(
     mapbox=dict(
@@ -449,14 +449,21 @@ policy_implication = html.Div(
     [
         html.Br(),
         html.H2(
-            "Community Clustering by Health and Demand Scores", style=div_style_center
+            "The Mismatch Between Residents' Health Needs and Health Resources", style=div_style_center
         ),
-        html.H3(id="some-id", style={"textAlign": "left", "color": colors["cluster"]}),
+        html.Br(),
+        html.Div(
+            '''
+            We categorize communities into four clusters based on demand and supply of health resources.
+            This allows us to identify communities with resource mismatch. Through this clustering, we prioritize resource allocation to communities 
+            with high demand yet insufficient health services to enhance healthcare delivery.''',
+            style = text_style,
+        ),
         dcc.Graph(
             id="scatter-plot-graph", figure=scatter_plot, style={"width": "100%"}
         ),
         html.Br(),
-        html.H2("Distribution of Groups by Location", style=div_style_center),
+        html.H2("Geographic Distribution of Clusters", style=div_style_center),
         dcc.Graph(id="map_group", figure=map_cluster, style={"width": "100%"}),
         html.Br(),
     ],
