@@ -64,7 +64,7 @@ Name  | Source | Collection Way | Responsible Team Members
  Zip Code with Longitude and Latitude |  [US Zip Codes from 2013 Government Data](https://gist.github.com/erichurst/7882666) | GeoJson available | Qi
 
 ## Dashboard Demo
-[![Dashboard Demo Video]](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
+[![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
 
 ## Instruction to launch the application
 
