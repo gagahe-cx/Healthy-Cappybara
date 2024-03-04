@@ -73,29 +73,29 @@ Click below picture to watch our dashboard demo video
 [![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
 
 ## Instruction to launch the application
-1.  Clone the repostitory\
-`
+1.  Clone the repostitory
+```
 git clone git@github.com:gagahe-cx/Healthy-Cappybara.git
-`
+```
 
 
-2. Navigate to the repository\
-`
-(cd ./ Healthy-Cappybara)
-`
+2. Navigate to the repository
+```
+cd ./ Healthy-Cappybara
+```
 
-3. set up and activate the virtual environment\
-`
-(poetry install)
-(poetry shell)
-`
+3. set up and activate the virtual environment
+```
+poetry install
+poetry shell
+```
 
-4. Launch the App\
-`
-(python3 -m Healthycappybara)
-`
+4. Launch the App
+```
+python3 -m Healthycappybara
+```
 
-5. Engage with the App (Using Alphabetical Inputs)\
+5. Engage with the App (Using Alphabetical Inputs)
 
 * (a) The Dashboard,
 
