@@ -75,7 +75,7 @@ Click below picture to watch our dashboard demo video
 ## Instruction to launch the application
 1.  Clone the repostitory\
 `
-(git clone git@github.com:gagahe-cx/Healthy-Cappybara.git)
+git clone git@github.com:gagahe-cx/Healthy-Cappybara.git
 `
 
 
