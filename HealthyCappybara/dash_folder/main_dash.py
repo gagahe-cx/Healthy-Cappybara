@@ -1,11 +1,11 @@
 '''
 Code contributor:
 Yijia (Gaga) He: 
-    All related to dash exccept relationship_maps, radar graph implementation
+    All related to dash exccept policy implication, radar graph implementation
     reading file, scatter_mapbox, Choropleth, Policy Implication graphs implementation,
     dash, app callbacks
 Yue (Luna) Jian:
-    All related to relationship_maps, radar graph implementation
+    All related to policy implication, radar graph implementation on acceessibility map,
     Choropleth; app callbacks 
 Style and layout: Yijia (Gaga) He
 Everything else: Yijia (Gaga) He

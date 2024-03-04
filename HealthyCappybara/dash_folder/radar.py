@@ -1,3 +1,10 @@
+'''
+Code contributor:
+Qi Zhao: 
+    Design the basic radar graph
+Yue (Luna) Jian:
+    Fit the radar graph in html format and implement in Dash
+'''
 import pandas as pd
 import numpy as np
 import plotly.graph_objs as go
@@ -12,10 +19,8 @@ def plot_radar_chart(df, zip_code, score_columns, score_type):
     if score_type not in valid_score_types:
         raise ValueError(f"score_type must be one of {valid_score_types}")
 
-    # Filter the DataFrame for the given zip_code
     zip_data = df[df['zcta_code'] == zip_code]
     
-    # If no data found for the zip_code, return an empty figure with a message
     if zip_data.empty:
         print(f"No data found for the specified ZIP code: {zip_code}")
         return go.Figure(layout=dict(title=dict(text=f'No data found for the specified ZIP code: {zip_code}')))
