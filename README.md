@@ -113,3 +113,6 @@ python3 -m Healthycappybara
 * Upon completion, the message " Congratulations! The data has been successfully crawled and saved to {file location}!" will be displayed.
 
 
+7. Code Reference
+* Scraping: https://www.zenrows.com/blog/selenium-python-web-scraping#headless-chrome
+* Dashboard: https://github.com/plotly/dash-sample-apps
