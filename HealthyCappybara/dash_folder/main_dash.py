@@ -125,13 +125,12 @@ img_style = {
     "display": "flex",
     "justifyContent": "center",
 }
-dropdown_style = {"width": "50%", "margin": "0 auto"}
+dropdown_style = {"marginLeft": "20px", "width": "1350px", "height": "50px"} 
 flex_style = {"display": "flex", "justifyContent": "center"}
 text_style = {
-    "marginLeft": "80px",
-    "marginRight": "80px",
+    "marginLeft": "60px",
+    "marginRight": "60px",
     "textAlign": "justify",
-    "margin": "20px",
 }
 tab_style = {
     "border": "none",
@@ -327,7 +326,7 @@ introduction_content = html.Div(
         high-quality, and affordable health care services. Aligning with the objective to enhance
         healthcare accessibility and promote healthier lives, our project aims to devise a
         systematic approach to improve access to healthcare within Cook County communities.
-    """,
+        """,
             style=text_style,
         ),
         html.Br(),
@@ -353,16 +352,13 @@ accessibility_map = html.Div(
             County: Health Service Score and Population Demand Score, both 
             grounded in the Analytical Hierarchy Process (AHP) and Entropy 
             Weighting Method (EWM).''',
-            style={"color": colors["text"], "padding": "5px"},
+            style=text_style,
         ),
         html.Br(),
         html.Br(),
         html.Div(
-            [
-                html.Label(
-                    "Please select the zipcode here:",
-                    style={"textAlign": "center", "display": "block"},
-                ),
+            [   
+                html.Div("Please select the zipcode here:",  style=text_style),
                 dcc.Dropdown(
                     id="zipcode-dropdown",
                     options=zip_lst,
@@ -370,7 +366,6 @@ accessibility_map = html.Div(
                     style=dropdown_style,
                 ),
             ],
-            style=flex_style,
         ),
         html.Br(),
         html.H2(
@@ -394,13 +389,31 @@ accessibility_map = html.Div(
                 "justifyContent": "space-between",
             },
         ),
+        html.Div([
+            html.P("While the Health Service Score considers:"),
+            html.Ul([
+                html.Li("Health Quantity: Number hospital/beds, Nursing agency beds, Number of Doctors"),
+                html.Li("Health Quality: Hospital rating, Nursing rating, Homecare rating, Doctor rating"),
+                html.Li("Health Expenses: Hospital cost, Nursing cost, Homecare cost"),
+                "Post-data weighting, these models utilize 22 indicators to derive their respective weightings.",
+            ])
+        ], style={'display': 'inline-block', 'marginLeft': '50px', 'verticalAlign': 'top'}),
+        html.Div([
+            html.P("The Population Demand Score incorporates: "),
+            html.Ul([
+                html.Li("Demographic factors: Total population, Median age, Sex ratio"),
+                html.Li("Vulnerability Factors: Non-white rate, Disability rate, Household with children and elder"),
+                html.Li("Poverty Factors: Poverty rate, Uninsured rate, Food stamps family"),
+                html.Li("Development Factors: Employment rate, Full Time rate"),
+            ])
+            ], style={'display': 'inline-block', 'marginLeft': '20px', 'verticalAlign': 'top'}), 
         html.Br(),
-        html.Div("Switch the dataset", style=text_style),
+        html.Div("Please switch the dataset here", style=text_style),
         dcc.Dropdown(
             id="dropdown",
             options=dropdown_options,
             value=initial_selection,
-            style={"marginLeft": "20px", "width": "1350px", "height": "50px"},
+            style=dropdown_style,
         ),
         html.Br(),
         dcc.Graph(id="map"),
@@ -421,16 +434,35 @@ relationship_map = html.Div(
             "Relationship Analysis",
             style={"textAlign": "center", "color": colors["text"]},
         ),
-        html.Div(
-            "Please edit...",
-            style={"textAlign": "left", "color": colors["text"], "padding": "30px"},
-        ),
         html.Br(),
         html.Div(html.Img(src=health_score_distribution, style=img_style)),
+        html.Div("Before we built our model, we conducted EDA to know the basic \
+            information about our data, including max, min, and also the distribution \
+            of combined health score, finding quite an imbalanced data that skewed \
+            to the right.", style=text_style),
         html.Br(),
         html.Div(html.Img(src=correlation_matrix_map, style=img_style)),
+        html.Div("The correlation matrix map here is to identify and visualize \
+            the strength and direction of relationships between both predictors\
+            (population census data) and target variables(combined health \
+            scores). ", style=text_style),
         html.Br(),
         html.Div(html.Img(src=feature_importance, style=img_style)),
+        html.Div(["The feature importance scores derived from hypertuned random \
+            forest model showed the most influential features such as the \
+            non-white rate, the prevalence of food stamp households, and median \
+            age, which interestingly align with findings from policy research. \
+            ", 
+            html.Br(),
+            html.A(" - SNAP Is Linked With Improved Health Outcomes and Lower Health Care Costs",
+               href="https://www.cbpp.org/research/food-assistance/snap-is-linked-with-improved-health-outcomes-and-lower-health-care-costs",
+               target="_blank", style={'color': '#C0B0FC'}),
+            "; ",
+            html.Br(),
+            html.A(" - Socioeconomic Status and Access to Healthcare: Interrelated Drivers for Healthy Aging",
+               href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7314918/",
+               target="_blank", style={'color': '#C0B0FC'}),
+            "."], style=text_style),
         html.Br(),
     ],
     style={
@@ -477,9 +509,10 @@ policy_implication = html.Div(
 residential_solution = html.Div(
     [
         html.Br(),
-        html.H2("MAP 5", style=div_style_center),
-        html.Div("Please edit", style=div_style_left_white),
-        html.Div("Please edit", style=div_style_left_white),
+        html.H2("Residenial Solution", style=div_style_center),
+        html.Div('''Residents could use this map to locate timely and high-quality
+         healthcare providers based on their location(zip code)''', style=text_style),
+        html.Br(),
         dcc.Graph(id="doctor_heat", figure=doctor_heat_map, style={"width": "100%"}),
         html.Br(),
         html.Br(),

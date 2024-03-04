@@ -33,7 +33,7 @@ def make_request(url):
     if not any(url.startswith(domain) for domain in ALLOWED_DOMAINS):
         raise ValueError(f"cannot fetch {url}, must be in {ALLOWED_DOMAINS}")
     
-    sleep(REQUEST_DELAY)
+    time.sleep(REQUEST_DELAY)
     print(f"Fetching {url}")
     response = session.get(url)
     response.raise_for_status()  
@@ -76,7 +76,7 @@ def get_doctor_url(url):
     response = make_request(url)
     root = lxml.html.fromstring(response.text)
     links = root.xpath('//h3[@class="card-name card-name--link"]//a[@href]')
-    return [make_link_absolute(link, url) for link in links]
+    return links
 
 
 def get_next_page_url(url):
@@ -164,10 +164,10 @@ def fetch_html_content(url):
     
     Returns:
         str: The HTML content of the webpage.
-    """
-    chrome_options = ChromeOptions()
+    """ 
+    chrome_options = Options()
     chrome_options.add_argument("--headless")
-    driver = Chrome(service=Service(ChromeDriverManager().install()), \
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), \
         options=chrome_options)
     driver.get(url)
     driver.implicitly_wait(10)
@@ -212,7 +212,7 @@ def get_city(url):
         list: A list of relative URLs to city-specific pages found on the webpage.
     """
     url += '/il-illinois' 
-    html_content = fetch_html_content(url)
+    html_content = fetch_html_content("https://www.healthgrades.com" + url)
     soup = BeautifulSoup(html_content, 'html.parser')
     links = []
 
@@ -255,6 +255,7 @@ def crawl(max_direc_to_crawl, max_city_to_crawl, max_pages_to_crawl, url):
     # Fetch all the doctor data from links obtained above
     for city_url in cities:
         urls_visited = 0
+        file_name_url = city_url
         while city_url and urls_visited < max_pages_to_crawl:
             doctor_urls = get_doctor_url(city_url)
 
@@ -266,6 +267,7 @@ def crawl(max_direc_to_crawl, max_city_to_crawl, max_pages_to_crawl, url):
             city_url = get_next_page_url(city_url)
             urls_visited += 1
 
+    file_name = urlparse(file_name_url).path.split('/')[1]
     with open(f"{file_name}.json", "w") as f:
         json.dump(doctors, f, indent=1)
 
