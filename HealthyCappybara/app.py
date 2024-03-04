@@ -8,6 +8,8 @@ from .dash_folder import main_dash
 from .scraping.scraping_script import crawl
 from .scraping.clean import clean
 
+url = "https://www.healthgrades.com/specialty-directory"
+
 def current_direc():
     """
     Get current directory
@@ -29,7 +31,6 @@ def run_scraping(max_direc_to_crawl, max_city_to_crawl, max_pages_to_crawl, url)
     Scrape data from healthgrades
     Written by: Yijia (Gaga) He
     """
-    url = "https://www.healthgrades.com/specialty-directory"
     return crawl(max_direc_to_crawl, max_city_to_crawl, max_pages_to_crawl, url)
 
 def run_clean():
@@ -54,7 +55,6 @@ def run():
     if user_input == "a":
         print("running dashboard...")
         run_dashboard()
-        print(f'Finished running, please check the crawled file at {current_direc()}')
     elif user_input == "b":
         category_user_input = input(
             """Please Enter: 
@@ -73,9 +73,9 @@ def run():
                     (n) No, thank you. I'd like to quit now.
                     Option: """)
         if continue_user_input == "y":   
-            print("this might take a few minutes... (you will be notified once finished))")     
-            run_dashboard(category_user_input, city_user_input)
-            print("the file is ready now")     
+            print("this might take a few minutes... (you will be notified once finished)")     
+            run_scraping(int(category_user_input), int(city_user_input), int(page_user_input), url)
+            print(f'Congratulations! The data has been successfully crawled and saved to {current_direc()}') 
         else:
             sys.exit()
     elif user_input == "c":
