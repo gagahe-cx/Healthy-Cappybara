@@ -14,7 +14,7 @@ COLOR_DICT = {'demand' : 'rgba(106,168,79,1)',
               'health' : 'rgba(255,0,0,1)'}
 
 def plot_radar_chart(df, zip_code, score_columns, score_type):
-    # Validate score_type
+    
     valid_score_types = ['demand', 'health']
     if score_type not in valid_score_types:
         raise ValueError(f"score_type must be one of {valid_score_types}")
@@ -85,7 +85,6 @@ def plot_radar_chart(df, zip_code, score_columns, score_type):
         showlegend=True
     )
     
-    # Determine the trace name based on score type
     if score_type == 'demand':
         trace_name = f'{score_type.capitalize()} Combined Score: {round(zip_data["Combined_Score"].iloc[0], 2)}'
     else:
