@@ -15,8 +15,8 @@ Healthcare Accessibility can be broken down into three key components:
 Our project employs a combination of weighting, machine learning, and geographical methods to create an index and predictive model for healthcare accessibility. We integrate data from various sources, primarily obtained through web scraping and searches, including information from the Centers for [Medicare & Medicaid Services](https://www.cms.gov/data-research), [US Census Bureau](https://data.census.gov/), and [Healthgrades](https://www.healthgrades.com/), which collectively provide details on over three million U.S. healthcare providers.
 
 Our project offers three distinct applications beneficial to both policymakers and residents:
-* **Data Visualization**: It enables the visualization of healthcare accessibility across various attributes, offering a clear view of the current landscape.
-* **Analysis and Prediction**: This feature calculates a healthcare accessibility score for each community, identifying crucial factors influencing access to healthcare.
+* [**Data Visualization**](HealthyCappybara/dash_folder/main_dash.py): It enables the visualization of healthcare accessibility across various attributes, offering a clear view of the current landscape.
+* [**Analysis and Prediction**](HealthyCappybara/analysis): This feature calculates a healthcare accessibility score for each community, identifying crucial factors influencing access to healthcare.
 * **Solutions Platform/Roadmap**: An interactive dashboard allows policymakers to identify communities with significant healthcare gaps, while enabling residents to locate timely, high-quality healthcare providers based on their location.
 
 ### Team Member (Last Name in Alphabetic Order)
