@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "healthy-capybara"
+version = "3.12"
+description = ""
+authors = ["Yue Jian <jiany@uchicago.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^2.2.1"
+geojson = "^3.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+dash = "^2.16.0"
+numpy = "^1.26.4"
+geopandas = "^0.14.3"
+pathlib = "^1.0.1"
+sklearn = "^0.0.post12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
