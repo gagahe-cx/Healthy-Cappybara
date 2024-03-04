@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="HealthyCappy_logo.png" width="100" title="logo">
+  <img src="HealthyCappy_logo.jpg" width="100" title="logo">
 </p>
 
 <h1 align="center">Healthcare Accessibility in Cook County</h1>
@@ -62,6 +62,9 @@ Name  | Source | Collection Way | Responsible Team Members
 ------------- | ------------- | ------------- | -------------
  ZCTA Code | [US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) | Shapefile available | Qi
  Zip Code with Longitude and Latitude |  [US Zip Codes from 2013 Government Data](https://gist.github.com/erichurst/7882666) | GeoJson available | Qi
+
+## Dashboard Demo
+[![Dashboard Demo Video]](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
 
 ## Instruction to launch the application
 
