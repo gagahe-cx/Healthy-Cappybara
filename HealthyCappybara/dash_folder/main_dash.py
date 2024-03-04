@@ -4,7 +4,7 @@ Yijia (Gaga) He:
     All related to dash exccept relationship_maps, radar graph implementation
     reading file, scatter_mapbox, Choropleth, Policy Implication graphs implementation,
     dash, app callbacks
-Yue (Luan) Jian:
+Yue (Luna) Jian:
     All related to relationship_maps, radar graph implementation
     Choropleth; app callbacks 
 Style and layout: Yijia (Gaga) He
@@ -161,6 +161,10 @@ dropdown_options = [
     {"label": "Health Demand", "value": "demand"},
     {"label": "Health Accessibility Score", "value": "accessibility"},
 ]
+
+# radar assets
+demand_column = ['demographic_demand', 'vulnerability_demand','poverty_demand', 'development_demand']
+health_column = ['quantity_score', 'expenses_score','quality_score']
 
 # residential solutions
 doctor_heat_map = px.scatter_mapbox(
@@ -587,13 +591,20 @@ def update_map(selected_option):
 
 
 @app.callback(
-    [Output("demand-radar-graph", "figure"), Output("health-radar-graph", "figure")],
-    [Input("zipcode-dropdown", "value")],
-)
-def update_radar_charts(zip_code):
-    demand_fig = plot_demand_radar_chart(demand_num, zip_code, demand_column)
-    health_fig = plot_health_radar_chart(health_num, zip_code, health_column)
-    return demand_fig, health_fig
+        Output(component_id='demand-radar-graph', component_property='figure'),
+        Input(component_id="zipcode-dropdown", component_property='value')
+        )
+
+def update_radar_chart(zip_code):
+    return plot_radar_chart(demand_num, zip_code, demand_column, 'demand')
+
+@app.callback(
+        Output(component_id='health-radar-graph', component_property='figure'),
+        Input(component_id="zipcode-dropdown", component_property='value')
+        )
+
+def update_radar_chart(zip_code):
+    return plot_radar_chart(health_num, zip_code, health_column, 'health')
 
 
 @app.callback(Output("scatter-plot-graph", "figure"), [Input("some-input", "value")])

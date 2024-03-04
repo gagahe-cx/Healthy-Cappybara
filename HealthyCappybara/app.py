@@ -21,7 +21,7 @@ def run_dashboard():
     Written by: Yijia (Gaga) He
     """
     app = main_dash.app
-    app.run_server(debug=False, port=8051, host='0.0.0.0')
+    app.run_server(debug=False, port=8050, host='0.0.0.0')
 
 
 def run_scraping(max_direc_to_crawl, max_city_to_crawl, max_pages_to_crawl, url):
@@ -35,7 +35,7 @@ def run_scraping(max_direc_to_crawl, max_city_to_crawl, max_pages_to_crawl, url)
 def run_clean():
     """
     Clean datasets in the data directory
-    Written by: Jian (Luna) Yue
+    Written by: Yue (Luna) Jian
     """
     return clean(current_direc())
 
