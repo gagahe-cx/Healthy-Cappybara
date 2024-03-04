@@ -8,20 +8,20 @@
 Many individuals in the United States struggle to access necessary health care services. [Healthy People 2030](https://health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality) defines Healthcare Accessibility as the capacity to obtain timely, high-quality, and affordable health care services. Aligning with the objective to enhance healthcare accessibility and promote healthier lives, our project aims to devise a systematic approach to improve access to healthcare within Cook County communities.
 
 Healthcare Accessibility can be broken down into three key components:
-* Healthcare Service Capacity: This refers to the availability of healthcare services, indicated by the number, costs, and quality ratings of hospitals, nursing homes, and home care agencies.
-* Population Demand: This encompasses the demographic need for healthcare services, factoring in population size, growth, poverty levels, and vulnerability.
-* Geographic Impedance: This assesses how easily residents can reach healthcare providers' locations, reflected by the gap between healthcare service capacity and population demand.
+* **Healthcare Service Capacity**: This refers to the availability of healthcare services, indicated by the number, costs, and quality ratings of hospitals, nursing homes, and home care agencies.
+* **Population Demand**: This encompasses the demographic need for healthcare services, factoring in population size, growth, poverty levels, and vulnerability.
+* **Geographic Impedance**: This assesses how easily residents can reach healthcare providers' locations, reflected by the gap between healthcare service capacity and population demand.
 
 Our project employs a combination of weighting, machine learning, and geographical methods to create an index and predictive model for healthcare accessibility. We integrate data from various sources, primarily obtained through web scraping and searches, including information from the Centers for [Medicare & Medicaid Services](https://www.cms.gov/data-research), [US Census Bureau](https://data.census.gov/), and [Healthgrades](https://www.healthgrades.com/), which collectively provide details on over three million U.S. healthcare providers.
 
 Our project offers three distinct applications beneficial to both policymakers and residents:
-* Data Visualization: It enables the visualization of healthcare accessibility across various attributes, offering a clear view of the current landscape.
-* Analysis and Prediction: This feature calculates a healthcare accessibility score for each community, identifying crucial factors influencing access to healthcare.
-* Solutions Platform/Roadmap: An interactive dashboard allows policymakers to identify communities with significant healthcare gaps, while enabling residents to locate timely, high-quality healthcare providers based on their location.
+* **Data Visualization**: It enables the visualization of healthcare accessibility across various attributes, offering a clear view of the current landscape.
+* **Analysis and Prediction**: This feature calculates a healthcare accessibility score for each community, identifying crucial factors influencing access to healthcare.
+* **Solutions Platform/Roadmap**: An interactive dashboard allows policymakers to identify communities with significant healthcare gaps, while enabling residents to locate timely, high-quality healthcare providers based on their location.
 
 ### Team Member (Last Name in Alphabetic Order)
 
-Hourui Guo, Yijia He, Yue Jian, Qi Zhao
+Hourui Guo, Yijia (Gaga) He, Yue (Luna) Jian, Qi Zhao
 
 ## Package used
 pandas\
@@ -73,24 +73,38 @@ Click below picture to watch our dashboard demo video
 [![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
 
 ## Instruction to launch the application
-1, Clone the repostitory\
+1.  Clone the repostitory
+```
 git clone git@github.com:gagahe-cx/Healthy-Cappybara.git
+```
 
-2, Navigate to the repository\
-cd ./ Healthy-Cappybara 
 
-3, set up and activate the virtual environment\
-poetry install\
+2. Navigate to the repository
+```
+cd ./ Healthy-Cappybara
+```
+
+3. set up and activate the virtual environment
+```
+poetry install
 poetry shell
+```
 
-4, Launch the App\
+4. Launch the App
+```
 python3 -m Healthycappybara
+```
 
-5, Engage with the App (Using Alphabetical Inputs)\
+5. Engage with the App (Using Alphabetical Inputs)
+
 (a) The Dashboard,
+
 (b) Scraping Data,
+
 (c) Clean Data,
+
 (d) Quit App.
+
 
 6. Option 2 has three sub-options. Users have the capability to input their specific criteria for conducting web scraping.\
 Condition 1: How many medical category do you want to crawl?\
