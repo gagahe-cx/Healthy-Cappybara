@@ -72,7 +72,7 @@ def run():
                     (y) Yes, please start now! 
                     (n) No, thank you. I'd like to quit now.
                     Option: """)
-        if continue_user_input == 7:   
+        if continue_user_input == "y":   
             print("this might take a few minutes... (you will be notified once finished))")     
             run_dashboard(category_user_input, city_user_input)
             print("the file is ready now")     
