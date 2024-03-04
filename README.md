@@ -42,7 +42,7 @@ webdriver-manager
 ### Health Service Part
 Name  | Source | Collection Way | Responsible Team Members
 ------------- | ------------- | ------------- | -------------
-Physicians' information on healthgrades  | [healthgrades website](https://www.healthgrades.com/)| Web Scraping | Yijia, Yue
+Physicians' information on healthgrades  | [healthgrades website](https://www.healthgrades.com/)| Web Scraping | Gaga, Luna
 Patient survey (HCAHPS) - In Patient Hospital  | [Data.CMS website](https://data.cms.gov/provider-data/dataset/dgck-syfz) | CSV file available | Hourui
 Outpatient & Ambulatory Surgery CAHPS Survey |  [Data.CMS website](https://data.cms.gov/provider-data/dataset/48nr-hqxx) | CSV file available | Hourui
 Nursing Home Provider Information | [Data.CMS website](https://data.cms.gov/provider-data/dataset/4pq5-n9py) | CSV file available | Hourui
