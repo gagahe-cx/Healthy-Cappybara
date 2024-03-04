@@ -319,16 +319,15 @@ introduction_content = html.Div(
     [
         html.Br(),
         html.H2("Project Initiative", style=text_style),
-        html.P(
-            """
-        Many individuals in the United States struggle to access necessary health care services.
-        Healthy People 2030 defines Healthcare Accessibility as the capacity to obtain timely,
-        high-quality, and affordable health care services. Aligning with the objective to enhance
-        healthcare accessibility and promote healthier lives, our project aims to devise a
-        systematic approach to improve access to healthcare within Cook County communities.
-        """,
-            style=text_style,
-        ),
+        html.P([
+            "Many individuals in the United States struggle to access necessary health care services. ",
+            html.A("Healthy People 2030", href="https://health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality", target="_blank", style={'color': '#C0B0FC'}),
+            ''' defines Healthcare Accessibility as the capacity to obtain timely,  
+            high-quality, and affordable health care services. Aligning with the 
+            objective to enhance healthcare accessibility and promote healthier lives, 
+            our project aims to devise a systematic approach to improve access to 
+            healthcare within Cook County communities.''',
+        ], style=text_style),
         html.Br(),
         html.Br(),
         html.H2("Team Member", style=text_style),
@@ -354,6 +353,8 @@ accessibility_map = html.Div(
             Weighting Method (EWM).''',
             style=text_style,
         ),
+        html.P(" - Post-data weighting, these models utilize 22 indicators to derive their respective weightings",
+        style=text_style,), 
         html.Br(),
         html.Br(),
         html.Div(
@@ -390,18 +391,17 @@ accessibility_map = html.Div(
             },
         ),
         html.Div([
-            html.P("While the Health Service Score considers:"),
+            html.P("While the Health Service Score considers:"), 
             html.Ul([
                 html.Li("Health Quantity: Number hospital/beds, Nursing agency beds, Number of Doctors"),
                 html.Li("Health Quality: Hospital rating, Nursing rating, Homecare rating, Doctor rating"),
                 html.Li("Health Expenses: Hospital cost, Nursing cost, Homecare cost"),
-                "Post-data weighting, these models utilize 22 indicators to derive their respective weightings.",
             ])
         ], style={'display': 'inline-block', 'marginLeft': '50px', 'verticalAlign': 'top'}),
         html.Div([
             html.P("The Population Demand Score incorporates: "),
             html.Ul([
-                html.Li("Demographic factors: Total population, Median age, Sex ratio"),
+                html.Li("Demographic Factors: Total population, Median age, Sex ratio"),
                 html.Li("Vulnerability Factors: Non-white rate, Disability rate, Household with children and elder"),
                 html.Li("Poverty Factors: Poverty rate, Uninsured rate, Food stamps family"),
                 html.Li("Development Factors: Employment rate, Full Time rate"),
