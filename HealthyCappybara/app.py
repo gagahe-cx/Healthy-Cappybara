@@ -44,7 +44,7 @@ def run():
     """
     User enter an option and interact with the program
     """
-    print("Welcome to Cook County Food Accessibility and Security App!")
+    print("Welcome to Cook County Health Accessibility App!")
     user_input = input(
         """Please Enter: 
                 (a) The Dashboard, 
