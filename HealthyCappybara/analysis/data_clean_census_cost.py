@@ -1,5 +1,5 @@
 '''
-Writen by Qi Zhao 
+Written by Qi Zhao 
 '''
 
 ## Data Clean for Census Data and Cost Data
