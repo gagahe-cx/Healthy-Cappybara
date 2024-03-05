@@ -70,7 +70,7 @@ Name  | Source | Collection Way | Responsible Team Members
 Click below picture to watch our dashboard demo video
 
 
-[![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
+[![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/BBvAjpx5Ang)
 
 ## Instruction to launch the application
 1.  Clone the repostitory
@@ -92,7 +92,7 @@ poetry shell
 
 4. Launch the App
 ```
-python3 -m Healthycappybara
+python3 -m HealthyCappybara
 ```
 
 5. Engage with the App (Using Alphabetical Inputs)
@@ -106,10 +106,10 @@ python3 -m Healthycappybara
 * (d) Quit App.
 
 
-6. Option 2 has three sub-options. Users have the capability to input their specific criteria for conducting web scraping.\
-* Condition 1: How many medical category do you want to crawl?\
-* Condition 2: How many cities do you want to crawl?\
-* Condition 3: Do you want to crawl now?\
+6. Option 2 has three sub-options. Users have the capability to input their specific criteria for conducting web scraping.
+* Condition 1: How many medical category do you want to crawl?
+* Condition 2: How many cities do you want to crawl?
+* Condition 3: Do you want to crawl now?
 * Upon completion, the message " Congratulations! The data has been successfully crawled and saved to {file location}!" will be displayed.
 
 
