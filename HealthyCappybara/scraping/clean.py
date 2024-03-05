@@ -1,5 +1,6 @@
 '''
 Written by: Yue (Luna) Jian
+Following the basic structures of PA 2
 '''
 
 import re
@@ -28,7 +29,6 @@ def clean_zipcode(address):
         return int(combined_zip_codes[0])
     return combined_zip_codes
 
-
 def clean_rating(rating_strings):
     pattern = r"(\d+\.\d+)"  
     match = re.search(pattern, rating_strings)
@@ -45,7 +45,6 @@ def clean_num_rating(rating_strings):
         return int(match.group(1))  
     else:
         return None 
-
 
 def clean_procedures(text):
     procedures_pattern = r":\s*([A-Za-z\s\(\)\-\.]+)(?:,|$)"
