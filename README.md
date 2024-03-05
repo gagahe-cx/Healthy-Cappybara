@@ -70,7 +70,7 @@ Name  | Source | Collection Way | Responsible Team Members
 Click below picture to watch our dashboard demo video
 
 
-[![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/UWgc9MgJOvg)
+[![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/BBvAjpx5Ang)
 
 ## Instruction to launch the application
 1.  Clone the repostitory
