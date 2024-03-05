@@ -1,9 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
+'''
+Code responsible member: Hourui Guo
+'''
 # Regression Summary
-#### Shmueli
+#### Based on Shmueli's repo on GitHub
 #### https://github.com/gedeck/dmba/blob/master/src/dmba/metric.py
+
 
 
 '''
