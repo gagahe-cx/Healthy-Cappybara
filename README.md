@@ -5,7 +5,7 @@
 <h1 align="center">Healthcare Accessibility in Cook County</h1>
 
 
-Many individuals in the United States struggle to access necessary health care services. [Healthy People 2030](https://health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality) defines Healthcare Accessibility as the capacity to obtain timely, high-quality, and affordable health care services. Aligning with the objective to enhance healthcare accessibility and promote healthier lives, our project aims to devise a systematic approach to improve access to healthcare within Cook County communities.
+Many individuals in the United States struggle to access necessary healthcare services. [Healthy People 2030](https://health.gov/healthypeople/objectives-and-data/browse-objectives/health-care-access-and-quality) defines Healthcare Accessibility as the capacity to obtain timely, high-quality, and affordable healthcare services. Aligning to enhance healthcare accessibility and promote healthier lives, our project aims to devise a systematic approach to improve access to healthcare within Cook County communities.
 
 Healthcare Accessibility can be broken down into three key components:
 * **Healthcare Service Capacity**: This refers to the availability of healthcare services, indicated by the number, costs, and quality ratings of hospitals, nursing homes, and home care agencies.
@@ -17,7 +17,7 @@ Our project employs a combination of weighting, machine learning, and geographic
 Our project offers three distinct applications beneficial to both policymakers and residents:
 * [**Data Visualization**](HealthyCappybara/dash_folder/main_dash.py): It enables the visualization of healthcare accessibility across various attributes, offering a clear view of the current landscape.
 * [**Analysis and Prediction**](HealthyCappybara/analysis): This feature calculates a healthcare accessibility score for each community, identifying crucial factors influencing access to healthcare.
-* **Solutions Platform/Roadmap**: An interactive dashboard allows policymakers to identify communities with significant healthcare gaps, while enabling residents to locate timely, high-quality healthcare providers based on their location.
+* **Solutions Platform/Roadmap**: An interactive dashboard allows policymakers to identify communities with significant healthcare gaps while enabling residents to locate timely, high-quality healthcare providers based on their location.
 
 ### Team Member (Last Name in Alphabetic Order)
 
@@ -35,6 +35,7 @@ numpy\
 base64\
 lxml\
 selenium\
+sklearn\
 webdriver-manager
 
 ## Data Sources
@@ -49,6 +50,7 @@ Nursing Home Provider Information | [Data.CMS website](https://data.cms.gov/prov
 Health Expenses&Beds for Hospital - Hospital Provider Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/hospital-provider-cost-report) | CSV file available | Qi
 Health Expenses&Beds for Nursing - Skilled Nursing Facility Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/skilled-nursing-facility-cost-report) | CSV file available | Qi
 Health Expenses for Homecare- Home Health Agency Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/home-health-agency-cost-report) | CSV file available | Qi
+CMS Manual System | [CMS.gov](https://www.cms.gov/regulations-and-guidance/guidance/transmittals/downloads/r29soma.pdf) | PDF file available | Hourui
 
 ### Population Demand Part
 Name  | Source | Collection Way | Responsible Team Members
@@ -67,13 +69,13 @@ Name  | Source | Collection Way | Responsible Team Members
  Zip Code with Longitude and Latitude |  [US Zip Codes from 2013 Government Data](https://gist.github.com/erichurst/7882666) | GeoJson available | Qi
 
 ## Dashboard Demo
-Click below picture to watch our dashboard demo video
+Click the picture below to watch our dashboard demo video
 
 
 [![Dashboard Demo Video](demo_cover.jpg)](https://youtu.be/BBvAjpx5Ang)
 
 ## Instruction to launch the application
-1.  Clone the repostitory
+1.  Clone the repository
 ```
 git clone git@github.com:gagahe-cx/Healthy-Cappybara.git
 ```
@@ -106,8 +108,8 @@ python3 -m HealthyCappybara
 * (d) Quit App.
 
 
-6. Option 2 has three sub-options. Users have the capability to input their specific criteria for conducting web scraping.
-* Condition 1: How many medical category do you want to crawl?
+6. Option 2 has three sub-options. Users can input their specific criteria for conducting web scraping.
+* Condition 1: How many medical categories do you want to crawl?
 * Condition 2: How many cities do you want to crawl?
 * Condition 3: Do you want to crawl now?
 * Upon completion, the message " Congratulations! The data has been successfully crawled and saved to {file location}!" will be displayed.
