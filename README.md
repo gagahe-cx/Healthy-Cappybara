@@ -92,7 +92,7 @@ poetry shell
 
 4. Launch the App
 ```
-python3 -m Healthycappybara
+python3 -m HealthyCappybara
 ```
 
 5. Engage with the App (Using Alphabetical Inputs)
