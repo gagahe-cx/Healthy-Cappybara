@@ -1,4 +1,6 @@
-## Writen by Qi Zhao ##
+'''
+Written by Qi Zhao 
+'''
 
 ## Data Processing for rating and prediction model
 import numpy as np
