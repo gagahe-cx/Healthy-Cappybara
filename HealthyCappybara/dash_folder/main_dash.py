@@ -157,8 +157,8 @@ map_center = {"lat": 37.58394, "lon": -77.51376}
 # dataset selection
 initial_selection = "demand"
 dropdown_options = [
-    {"label": "Health Demand", "value": "demand"},
-    {"label": "Health Accessibility Score", "value": "accessibility"},
+    {"label": "Population Demand Score", "value": "demand"},
+    {"label": "Health Resources Score", "value": "accessibility"},
 ]
 
 # radar assets
@@ -221,7 +221,7 @@ scatter_plot = px.scatter(
     y="Combined_Score",
     color="Group",
     hover_data=["zcta_code"],
-    title="Community Clustering by Health and Demand Scores",
+    title="Community Clustering by Health Resources and Demand Scores",
 )
 scatter_plot.update_layout(
     plot_bgcolor=colors["background"],
@@ -348,7 +348,7 @@ accessibility_map = html.Div(
         ),
         html.Div(
             '''We've developed two models to assess health accessibility in Cook 
-            County: Health Service Score and Population Demand Score, both 
+            County: Health Resources Score and Population Demand Score, both 
             grounded in the Analytical Hierarchy Process (AHP) and Entropy 
             Weighting Method (EWM).''',
             style=text_style,
@@ -597,11 +597,11 @@ def render_content(tab):
 def update_map(selected_option):
     color = "Combined_Score" if selected_option == "demand" else "combined_health_score"
     title = (
-        "Demand Score by Location"
+        "Population Demand Score by Location"
         if selected_option == "demand"
-        else "Health Score by Location"
+        else "Health Resources Score by Location"
     )
-    color_scale = "Reds" if selected_option == "demand" else "Blues"
+    color_scale = "Greens" if selected_option == "demand" else "Reds"
 
     fig = px.choropleth_mapbox(
         merged_df,
