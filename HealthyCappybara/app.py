@@ -4,8 +4,8 @@ Yijia (Gaga) He: all
 """
 import sys
 import os
-from .dash_folder import main_dash
-from .scraping.scraping_script import crawl
+from .dashboard import main_dash
+from .scraping.scraping_healthgrades import crawl
 from .scraping.clean import clean
 
 url = "https://www.healthgrades.com/specialty-directory"
