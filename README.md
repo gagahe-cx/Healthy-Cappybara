@@ -20,53 +20,13 @@ Our project offers three distinct applications beneficial to both policymakers a
 * **Solutions Platform/Roadmap**: An interactive dashboard allows policymakers to identify communities with significant healthcare gaps while enabling residents to locate timely, high-quality healthcare providers based on their location.
 
 ### Team Member (Last Name in Alphabetic Order)
+Name  | Main Code Contribution
+------------- | ------------- 
+Hourui Guo | 1) Analysis: random forest model; 2) Visulization: correlation matrix graph
+Yijia (Gaga) He | 1) Scarping: data scraping; 2) Dashboard: UI & interactive web; 3) Visulization: geographical map
+Yue (Luna) Jian | 1) Scarping: data cleaning; 2) Visulization: clustering graphs
+Qi Zhao | 1) Analysis: clustering model; 2) Visulization: radar graph
 
-Hourui Guo, Yijia (Gaga) He, Yue (Luna) Jian, Qi Zhao
-
-## Package used
-pandas\
-folium\
-plotly\
-matplotlib\
-pathlib\
-dash\
-json\
-numpy\
-base64\
-lxml\
-selenium\
-sklearn\
-webdriver-manager
-
-## Data Sources
-
-### Health Service Part
-Name  | Source | Collection Way | Responsible Team Members
-------------- | ------------- | ------------- | -------------
-Physicians' information on healthgrades  | [healthgrades website](https://www.healthgrades.com/)| Web Scraping | Gaga, Luna
-Patient survey (HCAHPS) - In Patient Hospital  | [Data.CMS website](https://data.cms.gov/provider-data/dataset/dgck-syfz) | CSV file available | Hourui
-Outpatient & Ambulatory Surgery CAHPS Survey |  [Data.CMS website](https://data.cms.gov/provider-data/dataset/48nr-hqxx) | CSV file available | Hourui
-Nursing Home Provider Information | [Data.CMS website](https://data.cms.gov/provider-data/dataset/4pq5-n9py) | CSV file available | Hourui
-Health Expenses&Beds for Hospital - Hospital Provider Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/hospital-provider-cost-report) | CSV file available | Qi
-Health Expenses&Beds for Nursing - Skilled Nursing Facility Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/skilled-nursing-facility-cost-report) | CSV file available | Qi
-Health Expenses for Homecare- Home Health Agency Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/home-health-agency-cost-report) | CSV file available | Qi
-CMS Manual System | [CMS.gov](https://www.cms.gov/regulations-and-guidance/guidance/transmittals/downloads/r29soma.pdf) | PDF file available | Hourui
-
-### Population Demand Part
-Name  | Source | Collection Way | Responsible Team Members
-------------- | ------------- | ------------- | -------------
-Demographic data | [US Census Bureau](https://data.census.gov/table?q=demographic&g=050XX00US17031$8600000) | CSV file available | Qi
-Income Data | [US Census Bureau](https://data.census.gov/table?t=Earnings&g=050XX00US17031) | CSV file available | Qi
-Health Insurance Coverage | [US Census Bureau](https://data.census.gov/table?t=Health%20Insurance&g=050XX00US17031) | CSV file available | Qi
-Employment | [US Census Bureau](https://data.census.gov/table?t=Employment&g=050XX00US17031) | CSV file available | Qi
-Social Characteristics |  [US Census Bureau](https://data.census.gov/table?q=Selected%20Characteristics&g=050XX00US17031$8600000) | Shapefile available | Qi
-Poverty Situation | [US Census Bureau](https://data.census.gov/table?q=poverty&g=050XX00US17031$8600000) | Shapefile available | Qi
-
-### Geographic information
-Name  | Source | Collection Way | Responsible Team Members
-------------- | ------------- | ------------- | -------------
- ZCTA Code | [US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) | Shapefile available | Qi
- Zip Code with Longitude and Latitude |  [US Zip Codes from 2013 Government Data](https://gist.github.com/erichurst/7882666) | GeoJson available | Qi
 
 ## Dashboard Demo
 Click the picture below to watch our dashboard demo video
@@ -118,3 +78,49 @@ python3 -m HealthyCappybara
 7. Code Reference
 * Scraping: https://www.zenrows.com/blog/selenium-python-web-scraping#headless-chrome
 * Dashboard: https://github.com/plotly/dash-sample-apps
+
+
+## Package used
+pandas\
+folium\
+plotly\
+matplotlib\
+pathlib\
+dash\
+json\
+numpy\
+base64\
+lxml\
+selenium\
+sklearn\
+webdriver-manager
+
+## Data Sources
+
+### Health Service Part
+Name  | Source | Collection Way | Responsible Team Members
+------------- | ------------- | ------------- | -------------
+Physicians' information on healthgrades  | [healthgrades website](https://www.healthgrades.com/)| Web Scraping | Gaga, Luna
+Patient survey (HCAHPS) - In Patient Hospital  | [Data.CMS website](https://data.cms.gov/provider-data/dataset/dgck-syfz) | CSV file available | Hourui
+Outpatient & Ambulatory Surgery CAHPS Survey |  [Data.CMS website](https://data.cms.gov/provider-data/dataset/48nr-hqxx) | CSV file available | Hourui
+Nursing Home Provider Information | [Data.CMS website](https://data.cms.gov/provider-data/dataset/4pq5-n9py) | CSV file available | Hourui
+Health Expenses&Beds for Hospital - Hospital Provider Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/hospital-provider-cost-report) | CSV file available | Qi
+Health Expenses&Beds for Nursing - Skilled Nursing Facility Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/skilled-nursing-facility-cost-report) | CSV file available | Qi
+Health Expenses for Homecare- Home Health Agency Cost Report | [Data.CMS website](https://data.cms.gov/provider-compliance/cost-report/home-health-agency-cost-report) | CSV file available | Qi
+CMS Manual System | [CMS.gov](https://www.cms.gov/regulations-and-guidance/guidance/transmittals/downloads/r29soma.pdf) | PDF file available | Hourui
+
+### Population Demand Part
+Name  | Source | Collection Way | Responsible Team Members
+------------- | ------------- | ------------- | -------------
+Demographic data | [US Census Bureau](https://data.census.gov/table?q=demographic&g=050XX00US17031$8600000) | CSV file available | Qi
+Income Data | [US Census Bureau](https://data.census.gov/table?t=Earnings&g=050XX00US17031) | CSV file available | Qi
+Health Insurance Coverage | [US Census Bureau](https://data.census.gov/table?t=Health%20Insurance&g=050XX00US17031) | CSV file available | Qi
+Employment | [US Census Bureau](https://data.census.gov/table?t=Employment&g=050XX00US17031) | CSV file available | Qi
+Social Characteristics |  [US Census Bureau](https://data.census.gov/table?q=Selected%20Characteristics&g=050XX00US17031$8600000) | Shapefile available | Qi
+Poverty Situation | [US Census Bureau](https://data.census.gov/table?q=poverty&g=050XX00US17031$8600000) | Shapefile available | Qi
+
+### Geographic information
+Name  | Source | Collection Way | Responsible Team Members
+------------- | ------------- | ------------- | -------------
+ ZCTA Code | [US Census Bureau](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) | Shapefile available | Qi
+ Zip Code with Longitude and Latitude |  [US Zip Codes from 2013 Government Data](https://gist.github.com/erichurst/7882666) | GeoJson available | Qi
